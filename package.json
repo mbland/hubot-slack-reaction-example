@@ -1,0 +1,15 @@
+{
+  "name": "hubot-slack-reaction-example",
+  "version": "1.0.0",
+  "author": "Mike Bland <mbland@acm.org>",
+  "description": "Demonstrates how to use the hubot-slack v4.1.0 ReactionMessage",
+  "dependencies": {
+    "hubot": "^2.19.0",
+    "hubot-slack": "^4.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbland/hubot-slack-reaction-example.git"
+  },
+  "license": "ISC"
+}
