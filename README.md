@@ -48,7 +48,7 @@ wish).
    ```
    [Wed Oct 05 2016 17:46:50 GMT-0400 (EDT)] INFO Logged in as mbland of mbland
    [Wed Oct 05 2016 17:46:50 GMT-0400 (EDT)] INFO Slack client now connected
-   [Wed Oct 05 2016 17:46:50 GMT-0400 (EDT)] INFO Listening for reaction_added messages
+   [Wed Oct 05 2016 17:46:50 GMT-0400 (EDT)] INFO Listening for reaction_added, reaction_removed events
    ```
 
 1. Post a message in your Slack domain and add an emoji reaction to it.
