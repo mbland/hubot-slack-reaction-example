@@ -1,5 +1,9 @@
 # hubot-slack-reaction-example
 
+Source: https://github.com/mbland/hubot-slack-reaction-example
+
+[![npm](https://img.shields.io/npm/v/hubot-slack-reaction-example.svg?maxAge=2592000)](https://www.npmjs.com/package/hubot-slack-reaction-example)
+
 This is a chat bot built on the [Hubot][hubot] framework that demonstrates how
 to handle the `ReactionMessage` type introduced in [hubot-slack][hubot-slack]
 v4.1.0.
@@ -8,6 +12,8 @@ All of the example code is in `scripts/handle-reaction.coffee`.
 
 [hubot]: http://hubot.github.com
 [hubot-slack]: https://www.npmjs.com/package/hubot-slack
+
+## Running the bot
 
 1. Clone this repo:
    ```sh
@@ -51,9 +57,10 @@ Now you should see something like:
 
 <figure>
 <img src='./example.png' alt='Usage example' title='Usage example' /><br/>
-<figcaption>After reacting to a message with a +1 emoji, the example bot will
-post a response. Notice that the bot runs as the user that created the API
-token, which is why we needed to edit `SlackBot.reaction` above.</figcaption>
+<figcaption>After the message received the <em>+1</em> emoji reaction, the
+example bot posted a response to the channel reporting the details of the
+event. Notice that the bot runs as the user that created the API token, which
+is why we needed to edit <code>SlackBot.reaction</code> above.</figcaption>
 </figure>
 
 [slack-create]: https://slack.com/create
