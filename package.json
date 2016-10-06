@@ -5,7 +5,7 @@
   "description": "Demonstrates how to use the hubot-slack v4.1.0 ReactionMessage",
   "dependencies": {
     "hubot": "^2.19.0",
-    "hubot-slack": "^4.1.0"
+    "hubot-slack": "mbland/hubot-slack#robot-react"
   },
   "repository": {
     "type": "git",
