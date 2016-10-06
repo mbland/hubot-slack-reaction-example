@@ -1,6 +1,6 @@
 {
   "name": "hubot-slack-reaction-example",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Mike Bland <mbland@acm.org>",
   "description": "Demonstrates how to use the hubot-slack v4.1.0 ReactionMessage",
   "dependencies": {
