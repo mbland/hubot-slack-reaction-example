@@ -28,7 +28,7 @@ module.exports = (robot) ->
         desc = "the comment with ID #{item.file_comment} for file #{item.file}"
 
       else
-        desc "an item of type #{item.type} that I don't recognize"
+        desc = "an item of type #{item.type} that I don't recognize"
 
     res.reply "#{user} added a *#{reaction}* reaction to #{desc}."
 
