@@ -1,8 +1,6 @@
 # Description:
 #   Demonstrates how to use the hubot-slack v4.1.0 ReactionMessage
 
-ReactionMessage = require.main.require 'hubot-slack/src/reaction-message'
-
 handleReaction = (res) ->
   message = res.message
   item = message.item
@@ -27,8 +25,5 @@ handleReaction = (res) ->
   res.reply "#{user} #{type} a *#{reaction}* reaction #{preposition} #{desc}."
 
 module.exports = (robot) ->
-  robot.listen(
-    (message) -> message instanceof ReactionMessage
-    handleReaction
-  )
+  robot.react handleReaction
   robot.logger.info 'Listening for reaction_added, reaction_removed events'
