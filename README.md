@@ -25,9 +25,6 @@ All of the example code is in `scripts/handle-reaction.coffee`.
 1. You must have administrator access for your Slack domain. Alternatively, you
    can [create your own personal slack domain][slack-create] for testing.
 
-1. Create a [Slack application][slack-app] for this bot (name it whatever you
-wish).
-
 1. If you don't have an existing API token handy, [create a new test
    token][slack-test-token]. If you have to do this, open the
    `node_modules/hubot-slack/src/bot.coffee` file and find the following line
@@ -64,7 +61,6 @@ is why we needed to edit <code>SlackBot.reaction</code> above.</figcaption>
 </figure>
 
 [slack-create]: https://slack.com/create
-[slack-app]: https://api.slack.com/slack-apps
 [slack-bot-user]: https://api.slack.com/bot-users]
 [slack-test-token]: https://api.slack.com/docs/oauth-test-tokens
 
