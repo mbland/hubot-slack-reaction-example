@@ -25,27 +25,22 @@ All of the example code is in `scripts/handle-reaction.coffee`.
 1. You must have administrator access for your Slack domain. Alternatively, you
    can [create your own personal slack domain][slack-create] for testing.
 
-1. If you don't have an existing API token handy, [create a new test
-   token][slack-test-token]. If you have to do this, open the
-   `node_modules/hubot-slack/src/bot.coffee` file and find the following line
-   from the `SlackBot.reaction` method:
-   ```coffeescript
-   return if (user == @self.id) || (user == @self.bot_id) #Ignore anything we sent
-   ```
-   Change the `(user == @self.id)` condition to use `!=` instead. This is
-   because the test token will cause your bot to run as your user, so any
-   reactions you add yourself will normally be discarded. (Of course you'd
-   normally associate a [Slack bot user][slack-bot-user] with your actual app.)
+1. Create a new [Slack bot user][slack-bot-user] for your team. Name it
+   anything you like, such as `reaction-example-bot`. Take note of the
+   API token, which should start with `xoxb-`.
+
+1. Invite the bot to a channel by `@`-mentioning it in the channel, e.g.
+   `@reaction-example-bot`.
 
 1. Run the bot:
    ```sh
-   $ HUBOT_SLACK_TOKEN=<your-test-token> ./bin/hubot --adapter slack
+   $ HUBOT_SLACK_TOKEN=<bot-test-token> ./bin/hubot --adapter slack
    ```
    you should see output like:
    ```
-   [Wed Oct 05 2016 17:46:50 GMT-0400 (EDT)] INFO Logged in as mbland of mbland
-   [Wed Oct 05 2016 17:46:50 GMT-0400 (EDT)] INFO Slack client now connected
-   [Wed Oct 05 2016 17:46:50 GMT-0400 (EDT)] INFO Listening for reaction_added, reaction_removed events
+   [Sun Oct 09 2016 12:22:12 GMT-0400 (EDT)] INFO Logged in as reaction-example-bot of mbland
+   [Sun Oct 09 2016 12:22:12 GMT-0400 (EDT)] INFO Slack client now connected
+   [Sun Oct 09 2016 12:22:12 GMT-0400 (EDT)] INFO Listening for reaction_added, reaction_removed events
    ```
 
 1. Post a message in your Slack domain and add an emoji reaction to it.
@@ -56,13 +51,11 @@ Now you should see something like:
 <img src='./example.png' alt='Usage example' title='Usage example' /><br/>
 <figcaption>After the message received the <em>+1</em> emoji reaction, the
 example bot posted a response to the channel reporting the details of the
-event. Notice that the bot runs as the user that created the API token, which
-is why we needed to edit <code>SlackBot.reaction</code> above.</figcaption>
+event.</figcaption>
 </figure>
 
 [slack-create]: https://slack.com/create
 [slack-bot-user]: https://api.slack.com/bot-users]
-[slack-test-token]: https://api.slack.com/docs/oauth-test-tokens
 
 ## Copyright
 
