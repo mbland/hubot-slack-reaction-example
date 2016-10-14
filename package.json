@@ -1,6 +1,6 @@
 {
   "name": "hubot-slack-reaction-example",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "author": "Mike Bland <mbland@acm.org>",
   "description": "Demonstrates how to use the hubot-slack v4.2.0 Robot.react method",
   "dependencies": {
